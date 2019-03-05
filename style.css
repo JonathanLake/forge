@@ -1,0 +1,19 @@
+/* Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Center content, and set line height */
+
+body {
+    display: grid;
+    height: 100vh;
+    margin: 0;
+    place-items: center center;
+    line-height: 1.5;
+  }
