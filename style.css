@@ -1,15 +1,27 @@
 @import url("node_modules/normalize.css/normalize.css");
 
-.name {
-    display: flex;
-    justify-content: center;
+body {
+  background-color: pink;
+  margin: 0 5%;
+}  
+
+.sheet {
+    width: 100%;
+    height: 75%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1em;
   }
 
-  .sheet {
-    background-color: black;
-    width: 960px;
-    height: 75%;
-    margin: 0 auto;
+  .sheet > div {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 7px;
+  }
+
+  .name {
+   grid-column: 1 / span 1;
+   height: 70px;
   }
   
   .name input:placeholder-shown {
@@ -25,6 +37,13 @@
   }
   
   .meta {
-    background-color: red;
-    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: span 5;
+    /* justify-content: space-around; */
+  }
+
+  .meta > *  {
+    padding: 10px;
+    flex: 1 1 24%;
   }
