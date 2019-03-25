@@ -2,48 +2,61 @@
 
 body {
   background-color: pink;
-  margin: 0 5%;
+  margin: 2% 0;
 }  
 
+.names {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: span 1;
+  padding: 20px;
+}
+
+.name-player {
+  margin-top: 10px;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: span 2;
+}
+
+.meta > *  {
+  padding: 10px;
+  flex: 1 1 24%;
+}
+
+.saving-throws label {
+  color: blue;
+}
+
 .sheet {
-    width: 100%;
-    height: 75%;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 1em;
-  }
+  width: 100%;
+  height: 75%;
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(3, 300px);
+  grid-gap: 1em;
+  justify-content: center;
+}
 
-  .sheet > div {
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 7px;
-  }
+.sheet > div {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 7px;
+}
 
-  .name {
-   grid-column: 1 / span 1;
-   height: 70px;
-  }
-  
-  .name input:placeholder-shown {
-    border: none;
-  }
+.sheet * input {
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 14px;
+}
 
-  .name input {
-    border: 1px solid black;
-  }
+.sheet * input:active {
+  border: none;
+}
 
-  .name input:focus {
-    border: 1px solid black;
-  }
-  
-  .meta {
-    display: flex;
-    flex-wrap: wrap;
-    grid-column: span 5;
-    /* justify-content: space-around; */
-  }
-
-  .meta > *  {
-    padding: 10px;
-    flex: 1 1 24%;
-  }
+.sheet * label {
+  display: flex;
+}
