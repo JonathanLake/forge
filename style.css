@@ -1,7 +1,7 @@
 @import url("node_modules/normalize.css/normalize.css");
 
 body {
-  background-color: pink;
+  background-color: #282B30;
   margin: 2% 0;
 }  
 
@@ -27,23 +27,19 @@ body {
   flex: 1 1 24%;
 }
 
-.saving-throws label {
-  color: blue;
-}
-
 .sheet {
   width: 100%;
   height: 75%;
   display: grid;
-  /* grid-template-columns: repeat(3, 1fr); */
   grid-template-columns: repeat(3, 300px);
   grid-gap: 1em;
   justify-content: center;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .sheet > div {
-  background-color: white;
-  border: 1px solid black;
+  background-color: #D5D8DC;
+  border: 2px solid white;
   border-radius: 7px;
 }
 
@@ -59,4 +55,8 @@ body {
 
 .sheet * label {
   display: flex;
+}
+
+textarea {
+  resize: none;
 }
